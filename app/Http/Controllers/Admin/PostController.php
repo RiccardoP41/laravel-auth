@@ -75,8 +75,9 @@ class PostController extends Controller
      * @param  \App\Post  $post
      * @return \Illuminate\Http\Response
      */
-    public function edit(Post $post)
+    public function edit($id)
     {
+        $post = Post::find($id);
         $tags = Tag::all();
         return view('admin.posts.edit',compact('post','tags'));
     }
