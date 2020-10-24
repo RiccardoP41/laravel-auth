@@ -35,5 +35,8 @@
   @endforeach
   </tbody>
 </table>
+<div class="pagination mt-5 justify-content-center">
+    {{$posts->links()}}    
+</div>
 
 @endsection
